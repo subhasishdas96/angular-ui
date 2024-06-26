@@ -1,0 +1,68 @@
+<!-- <h2>Student List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Grade</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.grade }}</td>
+      <td>
+        <button (click)="deleteStudent(student.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button (click)="addStudent()">Add Student</button>
+ -->
+<!-- student-list.component.html -->
+ <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="my-4">Student List</h2>
+    </div>
+    <div class="col-md-6 text-end">
+      <button class="btn btn-primary mt-4" (click)="addStudent()">Add Student</button>
+    </div>
+    <div class="table-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>UserName</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Password</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students">
+            <td>{{ student.id }}</td>
+            <td>{{ student.userName }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.grade }}</td>
+            <td>{{student.password}}</td>
+            <td>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-danger btn-sm mr-2" (click)="deleteStudent(student.id)">Delete</button>
+                <button class="btn btn-primary btn-sm" (click)="editStudent(student.id)">Edit</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+ </div>
+
+
